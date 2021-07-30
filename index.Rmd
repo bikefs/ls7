@@ -1,0 +1,21 @@
+---
+title: "Sunday Service bike repair"
+description: |
+  The Sunday Service community bike repair and servicing project
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+
+Welcome to the Sunday Service website.
+See the [about](about.html) page for more info.

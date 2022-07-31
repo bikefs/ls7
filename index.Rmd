@@ -5,6 +5,11 @@ description: |
 site: distill::distill_website
 ---
 
+```{r deploy, include=FALSE}
+system("bash ./deploy.sh")
+```
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
@@ -77,4 +82,6 @@ You need to fill in a short form telling us what you would like to fix on your b
 To book you bike in for the next Sunday that we're open, please fill in the form here: https://forms.gle/WVeLv2QKKkoByDpi8
 
 For further info see our [about](about.html) page and our Facebook page (to be created).
+
+
 

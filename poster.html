@@ -29,14 +29,19 @@
     .brand h1 span { display:block; }
     .brand .sub { margin:.1em 0 0; font-size:18px; font-weight:500; letter-spacing:.5px; color:#555; }
 
-  .top-bar { margin:0 0 12px; background:var(--navy); color:#fff; padding:10px 14px; border-radius:8px; font-size:clamp(22px,4.8vw,30px); font-weight:600; text-align:center; letter-spacing:.4px; display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:nowrap; }
-    .top-bar span { display:inline-block; }
-    .top-bar .bar-logo { height:40px; width:auto; flex:0 0 auto; filter:drop-shadow(0 4px 8px rgba(0,0,0,.18)); }
+  .top-bar { margin:0 0 12px; background:var(--navy); color:#fff; padding:10px 14px; border-radius:8px; font-size:clamp(22px,4.8vw,30px); font-weight:600; text-align:center; letter-spacing:.4px; }
 
-  .details { background:#f2f5f9; border:1px solid #d0d7de; border-radius:10px; padding:12px 16px; margin:0 0 14px; font-size:15.5px; line-height:1.5; }
+  .details { background:#f2f5f9; border:1px solid #d0d7de; border-radius:10px; padding:12px 16px; margin:0 0 14px; font-size:15.5px; line-height:1.5; display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap; }
+    .details-text { flex:1 1 240px; }
     .details p { margin:0 0 6px; }
     .details strong { color:var(--navy); font-weight:600; }
     .details .contact { margin-top:8px; font-size:14px; color:#333; }
+  .details-logo { width:150px; flex:0 0 auto; display:block; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,.1); }
+
+  @media (max-width:600px) {
+    .details { flex-direction:column; align-items:flex-start; }
+  .details-logo { width:110px; }
+  }
 
   .intro { font-weight:600; font-size:15.5px; margin:0 0 6px; }
   .body-text { font-size:15.5px; margin:0 0 10px; line-height:1.5; }
@@ -63,10 +68,7 @@
 </head>
 <body>
   <main class="poster" aria-label="Bike Fix Sunday LS7 promotional poster">
-    <div class="top-bar" role="banner">
-      <img class="bar-logo" src="assets/logo-original-green.png" alt="Bike Fix Sunday LS7 logo" />
-      <span>Bike Fix Sunday LS7 community</span>
-    </div>
+    <div class="top-bar" role="banner">Bike Fix Sunday LS7</div>
 
     <header>
       <figure class="photo-collage" aria-label="Collage of community bike repair sessions">
@@ -75,14 +77,17 @@
     </header>
 
     <section class="details" aria-label="Event details">
-      <p><strong>When:</strong> The last Sunday of every month, 2–5pm.</p>
-      <p><strong>Where:</strong> The Coach House, 12 Back Newton Grove, Chapeltown, Leeds LS7 4HL.</p>
-      <p><strong>Cost:</strong> Pay-as-you-feel with £5 min recommended donation.</p>
-      <p><strong>Why:</strong> Learn to fix your bike with guidance from volunteer mechanics.</p>
-      <p class="contact"><strong>Facebook:</strong> Bike Fix Sunday Leeds &nbsp;|&nbsp; <strong>Email:</strong> sundayservicele7@gmail.com</p>
+      <div class="details-text">
+        <p><strong>When:</strong> The last Sunday of every month, 2–5pm.</p>
+        <p><strong>Where:</strong> Coach House, 12 Back Newton Grove, Chapeltown, Leeds LS7 4HL.</p>
+        <p><strong>Cost:</strong> £5 min recommended donation.</p>
+        <p><strong>Why:</strong> Learn to fix your bike with guidance from volunteer mechanics.</p>
+        <p class="contact"><strong>Facebook:</strong> Bike Fix Sunday Leeds &nbsp;|&nbsp; <strong>Email:</strong> sundayservicels7@gmail.com</p>
+      </div>
+      <img class="details-logo" src="assets/logo-original-green.png" alt="Bike Fix Sunday LS7 logo" />
     </section>
 
-    <p class="body-text">Since 2020 we have been helping to fix bikes in the local community. Bring your bike along to one of our sessions and we'll try and help you fix it. We have affordable refurbished bikes for sale: check our Facebook to see what we currently have selling. See you down there!</p>
+    <p class="body-text">Since 2020 we have been helping to fix bikes in the local community. Bring your bike along to one of our sessions and we'll try to help you fix it. We have affordable refurbished bikes for sale: check our Facebook to see what we currently have selling. See you down there!</p>
 
     <div class="map-row" aria-label="Location and website access">
       <div class="map-box">

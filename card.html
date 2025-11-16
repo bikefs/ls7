@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bike Fix Sunday – Business Card</title>
+  <style>
+    :root{
+      --navy:#172a45;           /* deep navy for left panel */
+      --teal:#59b7ad;           /* brand green/teal for right panel */
+      --text:#ffffff;           /* white text on dark */
+      --ink:#1f2937;            /* body text */
+      --card-w:85mm;            /* standard business card width */
+      --card-h:55mm;            /* standard business card height */
+      --safe:4mm;               /* safe print margin */
+      --gap:0;                  /* no gap between panels */
+    }
+
+    html, body {
+      height:100%;
+      margin:0;
+      color:var(--ink);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+                   Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji",
+                   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      background:#f3f4f6;
+    }
+
+    /* Page preview layout */
+    .page {
+      min-height:100%;
+      display:grid;
+      place-items:center;
+      padding:24px;
+      box-sizing:border-box;
+    }
+
+    /* The card itself */
+    .card {
+      width:var(--card-w);
+      height:var(--card-h);
+      background:#fff;
+      display:grid;
+      grid-template-columns: 40% 60%;
+      overflow:hidden;
+      border-radius:6px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+    }
+
+    .left { 
+      background:var(--navy);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 6mm; 
+    }
+
+    .left h2 {
+      margin:0;
+      font-weight:600;
+      letter-spacing:.4px;
+      line-height:1.35;
+      font-size:4.6mm; /* scales nicely for 55mm height */
+    }
+
+    .right {
+      background:var(--teal);
+      color:#fff;
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding: var(--safe);
+      gap: 3mm;
+    }
+
+    .logo {
+      width: calc(var(--card-w) * 0.33);
+      max-width: 160px;
+      height:auto;
+      display:block;
+      filter: drop-shadow(0 2px 0 rgba(0,0,0,.02));
+    }
+
+    .address, .time {
+      margin:0;
+      text-align:center;
+      color:#f8fffe;
+    }
+
+    .time { font-weight:600; font-size: 3.6mm; letter-spacing:.2px; }
+    .address { font-size: 3.2mm; opacity:.95; }
+
+    /* safe area guides (screen only) */
+    .safe-guides::after{
+      content:"";
+      position:absolute;
+      inset: var(--safe);
+      border:1px dashed rgba(255,255,255,.35);
+      border-radius:4px;
+      pointer-events:none;
+    }
+
+    /* Print tweaks: remove shadow/background and center the card */
+    @media print {
+      body{ background:#fff; }
+      .card{ box-shadow:none; }
+      .page{ padding:0; }
+      /* Ensure exact physical size */
+      @page { size: auto; margin: 6mm; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-label="Bike Fix Sunday business card">
+
+      <!-- Left panel: schedule message -->
+      <div class="left">
+        <h2>
+          The Last Sunday<br/>
+          EVERY MONTH<br/>
+          2–5pm
+        </h2>
+      </div>
+
+      <!-- Right panel: brand and location -->
+      <div class="right safe-guides">
+        <img class="logo" src="assets/logo-original-green.svg" alt="Bike Fix Sunday – logo" />
+        <p class="time" aria-hidden="true">Community bike repairs</p>
+        <p class="address">Back Newton Grove, Chapeltown, Leeds</p>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

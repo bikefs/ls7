@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Bike Fix Sunday LS7 – Poster</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root {
+      --navy:#172a45;
+      --teal:#59b7ad;
+      --ink:#222;
+      --bg:#f5f7fa;
+      --accent:#172a45;
+      --a4-w:210mm;
+      --a4-h:297mm;
+      --page-margin:14mm; /* print margin */
+      --leading:1.4;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:var(--leading); }
+    main.poster { width:100%; max-width:var(--a4-w); margin:0 auto; background:#fff; padding:16px 20px 20px; position:relative; box-shadow:0 8px 28px rgba(0,0,0,.12); }
+
+  header { margin-bottom:8px; position:relative; overflow:hidden; }
+    .photo-collage { width:100%; border-radius:4px; overflow:hidden; background:#ddd; position:relative; left:-20px; }
+    .photo-collage img { display:block; width:calc(100% + 20px); height:auto; }
+    .brand { text-align:center; margin-bottom:8px; }
+    .brand img.logo { width:100%; max-width:160px; height:auto; }
+    .brand h1 { margin:.25em 0 0; font-size:clamp(28px,4.2vw,42px); line-height:1.05; font-weight:600; color:var(--navy); }
+    .brand h1 span { display:block; }
+    .brand .sub { margin:.1em 0 0; font-size:18px; font-weight:500; letter-spacing:.5px; color:#555; }
+
+  .top-bar { margin:0 0 12px; background:var(--navy); color:#fff; padding:10px 14px; border-radius:8px; font-size:clamp(22px,4.8vw,30px); font-weight:600; text-align:center; letter-spacing:.4px; display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:nowrap; }
+    .top-bar span { display:inline-block; }
+    .top-bar .bar-logo { height:40px; width:auto; flex:0 0 auto; filter:drop-shadow(0 4px 8px rgba(0,0,0,.18)); }
+
+  .details { background:#f2f5f9; border:1px solid #d0d7de; border-radius:10px; padding:12px 16px; margin:0 0 14px; font-size:15.5px; line-height:1.5; }
+    .details p { margin:0 0 6px; }
+    .details strong { color:var(--navy); font-weight:600; }
+    .details .contact { margin-top:8px; font-size:14px; color:#333; }
+
+  .intro { font-weight:600; font-size:15.5px; margin:0 0 6px; }
+  .body-text { font-size:15.5px; margin:0 0 10px; line-height:1.5; }
+    .contact-info { font-size:15.5px; margin:0 0 14px; line-height:1.5; }
+    .contact-info strong { font-weight:600; }
+
+  .map-row { display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; margin-bottom:0; }
+  .map-box { flex:1 1 320px; }
+  .map-box img { width:100%; max-height:180px; object-fit:cover; border:1px solid #d0d7de; border-radius:4px; display:block; }
+
+    .qr-box { width:150px; text-align:center; }
+    .qr-box img { width:100%; height:auto; display:block; border:1px solid #e2e8f0; border-radius:8px; padding:6px; background:#fff; }
+    .qr-box .scan { font-size:12px; margin:6px 0 0; letter-spacing:.5px; color:#444; }
+
+    /* Print adjustments */
+    @media print {
+      body { background:#fff; }
+      main.poster { box-shadow:none; width:var(--a4-w); height:var(--a4-h); padding: var(--page-margin); }
+  footer, .top-bar { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+      @page { size: A4 portrait; margin:0; }
+      footer { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="poster" aria-label="Bike Fix Sunday LS7 promotional poster">
+    <div class="top-bar" role="banner">
+      <img class="bar-logo" src="assets/logo-original-green.png" alt="Bike Fix Sunday LS7 logo" />
+      <span>Bike Fix Sunday LS7 community</span>
+    </div>
+
+    <header>
+      <figure class="photo-collage" aria-label="Collage of community bike repair sessions">
+        <img src="assets/photos.png" alt="Photos of volunteers helping with community bike repairs" />
+      </figure>
+    </header>
+
+    <section class="details" aria-label="Event details">
+      <p><strong>When:</strong> The last Sunday of every month, 2–5pm.</p>
+      <p><strong>Where:</strong> The Coach House, 12 Back Newton Grove, Chapeltown, Leeds LS7 4HL.</p>
+      <p><strong>Cost:</strong> Pay-as-you-feel with £5 min recommended donation.</p>
+      <p><strong>Why:</strong> Learn to fix your bike with guidance from volunteer mechanics.</p>
+      <p class="contact"><strong>Facebook:</strong> Bike Fix Sunday Leeds &nbsp;|&nbsp; <strong>Email:</strong> sundayservicele7@gmail.com</p>
+    </section>
+
+    <p class="body-text">Since 2020 we have been helping to fix bikes in the local community. Bring your bike along to one of our sessions and we'll try and help you fix it. We have affordable refurbished bikes for sale: check our Facebook to see what we currently have selling. See you down there!</p>
+
+    <div class="map-row" aria-label="Location and website access">
+      <div class="map-box">
+        <img src="assets/map.png" alt="Map showing location of The Coach House on Back Newton Grove in Chapeltown Leeds" />
+      </div>
+      <div class="qr-box">
+        <img src="assets/qr.png" alt="QR code linking to Bike Fix Sunday website" />
+        <div class="scan">Scan QR code for our website</div>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
